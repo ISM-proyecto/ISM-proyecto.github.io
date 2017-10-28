@@ -420,6 +420,8 @@ footer ul li a:hover {
 }
 
 #email {
+    width: 100%;
+    margin-bottom: 10px;
      border-bottom-color: #b3b3b3;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
