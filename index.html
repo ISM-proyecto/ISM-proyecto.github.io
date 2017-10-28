@@ -36,6 +36,15 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <p><br>Todavía estamos en fase de desarrollo! Vuelve pronto.</p>
+      
+    <div id="graciasInfo">
+        <p>Gracias para tu correo electronico</p>  
+    </div>  
+      
+    <div id="emailForm">  
+      <input type="text" placeholder="email" name="nombre" id="email">
+      <div class="btn btn-outline btn-xl" name="Submit" onclick="myFunction()">Enviar</div>
+    </div>
   </div>
 
 </div>
@@ -133,6 +142,19 @@
  gtag('js', new Date());
 
  gtag('config', 'UA-108888782-1');
+    
+    $('#graciasInfo').hide()
+  
+    function myFunction(){
+          $('#emailForm').hide()
+          $('#graciasInfo').show()
+        var valor = $('#email').val();
+        
+        $.ajax({
+    type: "GET",
+    url: 'https://script.google.com/macros/s/AKfycbxRe6PZJ2lRBaBrhpLnm1ix2-WslS15d-tBx26j9poDlzELI-w/exec?email=' + valor
+});
+    }
 </script>
 
   </body>
