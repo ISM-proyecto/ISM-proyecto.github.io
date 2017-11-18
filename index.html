@@ -2,19 +2,31 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <meta name='viewport' content='width=device-width, initial-scale=0, maximum-scale=1.0' />
+    @*<meta name='viewport' content='width=device-width, initial-scale=0, maximum-scale=1.0, user-scalable=0' />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <input type="text" placeholder="Classroom" class="form-control"/>
+    <datalist id="suggestions">
+    </datalist>
 
-    <div onclick="bluetooth()" class="btn btn-success">Look for location devices</div>
-    <div id="log"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
+    <nav class="device-fixed-height device-fixed-width">
+        <input type="text" placeholder="Classroom" class="size" id="search" list="suggestions" autocomplete="off"/>
+        <i onclick="search()" class="fa fa-search size btn-success" aria-hidden="true"></i>
+        <i onclick="bluetooth()" class="fa fa-globe size btn-info" aria-hidden="true"></i>
+    </nav>
+
+    <div id="from"></div>
+    <div id="to"></div>
+
+    <div class="trajectory"></div>
+        <img src="plan.png" id="plan" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="javascript.js"></script>
 </body>
 </html>
