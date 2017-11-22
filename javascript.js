@@ -1,4 +1,11 @@
-﻿var classrooms = {};
+﻿if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register("sw.js")
+        .then(msg => console.log("SW registered"))
+        .catch(console.error)
+}
+
+var classrooms = {};
 var beacons = {};
 var trajectories = {};
 
