@@ -16,23 +16,13 @@ var classroom = {
 };
 var beacon = {
     name: 'DESKTOP-NB',
-    top: 130,
-    left: 1380
+    top: 650,
+    left: 1530
 };
 
-classrooms['S2'] =
-    {
-        name: 'S2',
-        top: 1250,
-        left: 1380
-    };
+classrooms['S2'] = classroom;
 
-beacons['DESKTOP-NB'] =
-    {
-        name: 'DESKTOP-NB',
-        top: 130,
-        left: 1380
-    };
+beacons['DESKTOP-NB'] = beacon;
 
 trajectories['DESKTOP-NB-S2'] =
     {
@@ -40,30 +30,8 @@ trajectories['DESKTOP-NB-S2'] =
     groups:
     [
         [
-                {
-                    top: 200,
-                    left: 1395
-                },
-                {
-                    top: 200,
-                    left: 1465
-                },
-                {
-                    top: 470,
-                    left: 1465
-                },
-                {
-                    top: 470,
-                    left: 1495
-                },
-                {
-                    top: 430,
-                    left: 1495
-                }
-        ],
-        [
             {
-                top: 975,
+                top: 670,
                 left: 1500
             },
             {
