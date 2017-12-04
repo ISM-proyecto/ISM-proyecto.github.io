@@ -32,6 +32,18 @@ trajectories['DESKTOP-NB-S2'] =
         [
             {
                 top: 670,
+                left: 1510
+            },
+            {
+                top: 670,
+                left: 1492
+            },
+            {
+                top: 800,
+                left: 1465
+            },
+            {
+                top: 975,
                 left: 1500
             },
             {
