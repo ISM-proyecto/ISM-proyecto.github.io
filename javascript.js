@@ -1,4 +1,6 @@
-﻿if('serviceWorker' in navigator) {
+﻿var url ='http://myucoapi.azurewebsites.net/api/';
+
+if('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register("sw.js")
         .then(msg => console.log("SW registered"))
@@ -9,86 +11,34 @@ var classrooms = {};
 var beacons = {};
 var trajectories = {};
 
-var classroom = {
-    name: 'S2',
-    top: 1250,
-    left: 1380
-};
-var beacon = {
-    name: 'DESKTOP-NB',
-    top: 650,
-    left: 1530
-};
+fetch(url + 'classrooms')
+    .then(x => x.json())
+    .then(x => 
+        {
+          x.forEach(function(element) {
+                classrooms[element.name]= element;
+            });
+    
+        setupSuggestions();
+        })
 
-classrooms['S2'] = classroom;
+fetch(url + 'beacons')
+    .then(x => x.json())
+    .then(x => 
+        {
+          x.forEach(function(element) {
+                beacons[element.name]= element;
+            });
+        })
 
-beacons['DESKTOP-NB'] = beacon;
-
-trajectories['DESKTOP-NB-S2'] =
-    {
-    name: 'DESKTOP-NB-S2',
-    groups:
-    [
-        [
-            {
-                top: 670,
-                left: 1510
-            },
-            {
-                top: 670,
-                left: 1492
-            },
-            {
-                top: 800,
-                left: 1465
-            },
-            {
-                top: 975,
-                left: 1500
-            },
-            {
-                top: 1020,
-                left: 1500
-            },
-            {
-                top: 1020,
-                left: 1465
-            },
-            {
-                top: 975,
-                left: 1465
-            }
-        ],
-        [
-            {
-                top: 1540,
-                left: 1500
-            },
-            {
-                top: 1585,
-                left: 1500
-            },
-            {
-                top: 1585,
-                left: 1465
-            },
-            {
-                top: 1340,
-                left: 1465
-            },
-            {
-                top: 1340,
-                left: 1400
-            },
-            {
-                top: 1310,
-                left: 1400
-            }
-        ]
-        ]
-    };
-
-setupSuggestions();
+fetch(url + 'trajectories')
+    .then(x => x.json())
+    .then(x => 
+        {
+          x.forEach(function(element) {
+                trajectories[element.name]= element;
+            });
+        })
 
 function bluetooth() {
 

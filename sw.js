@@ -7,6 +7,9 @@ var filesToCache = [
   '/style.css',
   '/javascript.js',
   '/icons/manifest.json',
+  'http://myucoapi.azurewebsites.net/api/classrooms',
+  'http://myucoapi.azurewebsites.net/api/beacons',
+  'http://myucoapi.azurewebsites.net/api/trajectories'
   'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
   'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
   'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
