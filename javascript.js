@@ -1,4 +1,4 @@
-﻿var url ='http://myucoapi.azurewebsites.net/api/';
+﻿var url ='https://myucoapi.azurewebsites.net/api/';
 
 if('serviceWorker' in navigator) {
     navigator.serviceWorker
